@@ -14,7 +14,7 @@ def apply_global_styles() -> None:
             --lab-panel: #f8fafc;
         }
         .block-container {
-            padding-top: 3.25rem;
+            padding-top: 4rem;
             padding-bottom: 3rem;
             max-width: 1180px;
         }
@@ -36,9 +36,11 @@ def apply_global_styles() -> None:
         }
         .lab-hero {
             border-bottom: 1px solid var(--lab-border);
-            padding-top: 0.2rem;
+            margin-top: 0.75rem;
+            padding-top: 0.75rem;
             padding-bottom: 1.1rem;
             margin-bottom: 1.25rem;
+            overflow: visible;
         }
         .lab-hero p {
             max-width: 760px;
@@ -115,6 +117,7 @@ def render_sidebar(active_page: str) -> None:
 def page_header(eyebrow: str, title: str, body: str) -> None:
     st.markdown(
         f"""
+        <div style="height: 1.25rem;"></div>
         <section class="lab-hero">
             <div class="lab-eyebrow">{eyebrow}</div>
             <h1>{title}</h1>
