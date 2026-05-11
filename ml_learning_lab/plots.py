@@ -476,6 +476,7 @@ def forest_vote_diagram(model, sample: pd.Series, title: str = "A forest turns m
         showarrow=False,
         font=dict(size=13, color="#475569"),
     )
+    fig.update_layout(showlegend=False)
     fig.update_xaxes(visible=False, range=[-0.55, 4.85])
     fig.update_yaxes(visible=False, range=[-0.55, 2.65])
     return base_layout(fig, title)
@@ -574,4 +575,3 @@ def forest_training_process_diagram() -> go.Figure:
     fig.update_xaxes(visible=False, range=[-0.6, 4.6])
     fig.update_yaxes(visible=False, range=[-1.08, 0.72])
     return base_layout(fig, "How a random forest learns")
-
