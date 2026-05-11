@@ -82,7 +82,7 @@ The Decision Trees lesson explains binary classification with two synthetic inpu
 The Random Forests lesson shows how many decision trees vote together. Users can change the number of trees and see:
 
 - decision regions update live
-- train/test accuracy over every tree count from 1 to 200
+- train/test accuracy over every tree count from 1 to 100
 - feature importance
 - a split vote among displayed trees
 - how bootstrapped samples and majority voting work

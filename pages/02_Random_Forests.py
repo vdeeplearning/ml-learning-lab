@@ -31,7 +31,7 @@ dataset = make_forest_voting_dataset()
 
 @st.cache_data(show_spinner=False)
 def forest_accuracy_scores() -> list[dict[str, float]]:
-    return random_forest_score_path(make_forest_voting_dataset(), max_estimators=200)
+    return random_forest_score_path(make_forest_voting_dataset(), max_estimators=100)
 
 
 forest_scores = forest_accuracy_scores()
@@ -61,7 +61,7 @@ with left:
     trees = st.slider(
         "Number of trees",
         min_value=1,
-        max_value=200,
+        max_value=100,
         value=40,
         step=1,
         help="More trees usually make the forest steadier, though each update takes slightly more work.",
