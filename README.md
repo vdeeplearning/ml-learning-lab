@@ -37,6 +37,22 @@ pip install -r requirements.txt
 streamlit run app.py
 ```
 
+## Deploy On Render
+
+This repo includes a `render.yaml` blueprint for a free Render web service.
+
+1. Push the repo to GitHub.
+2. In Render, choose **New > Blueprint**.
+3. Connect `https://github.com/vdeeplearning/ml-learning-lab`.
+4. Select the `main` branch and deploy the blueprint.
+
+Render will use:
+
+- Build command: `pip install -r requirements.txt`
+- Start command: `streamlit run app.py --server.address 0.0.0.0 --server.port $PORT`
+
+After deployment, Render will provide a public `onrender.com` URL suitable for sharing with recruiters.
+
 ## Design Goals
 
 - Teach classical ML concepts with beginner-friendly explanations.
