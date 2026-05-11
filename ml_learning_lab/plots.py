@@ -470,15 +470,16 @@ def forest_vote_diagram(model, sample: pd.Series, title: str = "A forest turns m
             line=dict(color="#cbd5e1", width=1.4),
         )
     fig.add_annotation(
-        x=4.1,
-        y=2.32,
+        x=2.05,
+        y=2.62,
         text=f"Visible votes: {positive_votes} Positive, {negative_votes} Negative",
         showarrow=False,
         font=dict(size=13, color="#475569"),
+        xanchor="center",
     )
     fig.update_layout(showlegend=False)
-    fig.update_xaxes(visible=False, range=[-0.55, 4.85])
-    fig.update_yaxes(visible=False, range=[-0.55, 2.65])
+    fig.update_xaxes(visible=False, range=[-0.55, 4.95])
+    fig.update_yaxes(visible=False, range=[-0.55, 2.95])
     return base_layout(fig, title)
 
 
