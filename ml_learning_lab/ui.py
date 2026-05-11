@@ -14,7 +14,7 @@ def apply_global_styles() -> None:
             --lab-panel: #f8fafc;
         }
         .block-container {
-            padding-top: 2.1rem;
+            padding-top: 3.25rem;
             padding-bottom: 3rem;
             max-width: 1180px;
         }
@@ -30,11 +30,13 @@ def apply_global_styles() -> None:
             font-size: 0.82rem;
             font-weight: 700;
             letter-spacing: 0.08em;
+            line-height: 1.35;
             text-transform: uppercase;
             margin-bottom: 0.25rem;
         }
         .lab-hero {
             border-bottom: 1px solid var(--lab-border);
+            padding-top: 0.2rem;
             padding-bottom: 1.1rem;
             margin-bottom: 1.25rem;
         }
