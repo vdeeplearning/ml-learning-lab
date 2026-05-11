@@ -103,3 +103,25 @@ def train_random_forest(dataset: DatasetBundle, n_estimators: int) -> ModelResul
         train_score=model.score(dataset.train_features, dataset.train_target),
         test_score=model.score(dataset.test_features, dataset.test_target),
     )
+
+
+def random_forest_score_path(dataset: DatasetBundle, max_estimators: int = 200) -> list[dict[str, float]]:
+    model = RandomForestClassifier(
+        n_estimators=1,
+        max_depth=5,
+        random_state=7,
+        n_jobs=1,
+        warm_start=True,
+    )
+    scores = []
+    for count in range(1, max_estimators + 1):
+        model.set_params(n_estimators=count)
+        model.fit(dataset.train_features, dataset.train_target)
+        scores.append(
+            {
+                "Trees": count,
+                "Train accuracy": model.score(dataset.train_features, dataset.train_target),
+                "Test accuracy": model.score(dataset.test_features, dataset.test_target),
+            }
+        )
+    return scores

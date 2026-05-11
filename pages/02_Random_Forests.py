@@ -1,7 +1,7 @@
 import streamlit as st
 
 from ml_learning_lab.content import lesson_by_title
-from ml_learning_lab.models import make_forest_voting_dataset, train_random_forest
+from ml_learning_lab.models import make_forest_voting_dataset, random_forest_score_path, train_random_forest
 from ml_learning_lab.plots import (
     accuracy_curve,
     classification_regions,
@@ -31,18 +31,7 @@ dataset = make_forest_voting_dataset()
 
 @st.cache_data(show_spinner=False)
 def forest_accuracy_scores() -> list[dict[str, float]]:
-    cached_dataset = make_forest_voting_dataset()
-    scores = []
-    for count in range(1, 201):
-        result = train_random_forest(cached_dataset, n_estimators=count)
-        scores.append(
-            {
-                "Trees": count,
-                "Train accuracy": result.train_score,
-                "Test accuracy": result.test_score,
-            }
-        )
-    return scores
+    return random_forest_score_path(make_forest_voting_dataset(), max_estimators=200)
 
 
 forest_scores = forest_accuracy_scores()
