@@ -11,7 +11,7 @@ Logistic Regression is intentionally set aside for now and is not included in th
 
 ## Live Demo
 
-[Open ML Learning Lab](https://ml-learning-lab.onrender.com/)
+[Open ML Learning Lab](https://ml-learning-lab.streamlit.app/)
 
 ## Project Structure
 
@@ -40,22 +40,6 @@ python -m venv .venv
 pip install -r requirements.txt
 streamlit run app.py
 ```
-
-## Deploy On Render
-
-This repo includes a `render.yaml` blueprint for a free Render web service.
-
-1. Push the repo to GitHub.
-2. In Render, choose **New > Blueprint**.
-3. Connect `https://github.com/vdeeplearning/ml-learning-lab`.
-4. Select the `main` branch and deploy the blueprint.
-
-Render will use:
-
-- Build command: `pip install -r requirements.txt`
-- Start command: `streamlit run app.py --server.address 0.0.0.0 --server.port $PORT`
-
-After deployment, Render will provide a public `onrender.com` URL suitable for sharing with recruiters.
 
 ## Design Goals
 
