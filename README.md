@@ -9,6 +9,10 @@ The current public demo focuses on two tree-based topics:
 
 Logistic Regression is intentionally set aside for now and is not included in this demo.
 
+## Live Demo
+
+[Open ML Learning Lab](https://ml-learning-lab.onrender.com/)
+
 ## Project Structure
 
 ```text
