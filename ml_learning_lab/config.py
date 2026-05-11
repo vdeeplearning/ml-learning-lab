@@ -1,0 +1,8 @@
+APP_NAME = "ML Learning Lab"
+
+PRIMARY_ACCENT = "#2563eb"
+SECONDARY_ACCENT = "#f59e0b"
+SUCCESS_ACCENT = "#059669"
+
+LESSON_STATUS_DRAFT = "Scaffolded"
+
